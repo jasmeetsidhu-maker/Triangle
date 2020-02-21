@@ -34,16 +34,23 @@ namespace Triangle
                             Console.Write("Enter Value of Side 1 for Triangle: ");
                             s1 = Convert.ToInt32(Console.ReadLine());
 
-                            Console.Write("Enter Value of Side 2 for Triangle:");
+                            Console.Write("Enter Value of Side 2 for Triangle: ");
                             s2 = Convert.ToInt32(Console.ReadLine());
 
                             Console.Write("Enter Value of Side 3 for Triangle: ");
                             s3 = Convert.ToInt32(Console.ReadLine());
 
 
-                            string res = TriangleSolver.Analyze(s1, s2, s3);
-                            Console.WriteLine(res);
 
+
+                            if ((TriangleSolver.checkValidity(s1, s2, s2)) == 1)
+                            {
+                                Console.Write("Valid triangle\n");
+                                string res = TriangleSolver.Analyze(s1, s2, s3);
+                                Console.WriteLine(res);
+                            }
+                            else
+                                Console.Write("Invalid triangle\n");
                             break;
 
                         case 2:
